@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div id="game-container">
+        <h1>Life Path Simulator</h1>
+
+        <div id="character-info" class="panel">
+            <h2><span id="char-name">Character Name</span></h2>
+            <p><strong>Age:</strong> <span id="char-age">0</span></p>
+            <p><strong>Health:</strong> <span id="char-health">100</span></p>
+            <p><strong>Savings:</strong> $<span id="char-savings">0</span></p>
+            <p><strong>Career:</strong> <span id="char-career">None</span></p>
+        </div>
+
+        <div id="game-log" class="panel">
+            <h2>Yearly Log</h2>
+            <p id="log-message">Welcome to your new life! Press 'Next Year' to begin.</p>
+        </div>
+
+        <div id="choices" class="panel">
+            <h2>Your Choices</h2>
+            <button id="age-up-button">Next Year</button>
+            </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

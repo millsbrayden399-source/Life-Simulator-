@@ -39,3 +39,37 @@ class Character {
         this.life_events = [];
     }
 }
+class LifeSimulator {
+    constructor() {
+        // Find all the HTML elements we need to update and store them
+        this.nameDisplay = document.getElementById('char-name');
+        this.ageDisplay = document.getElementById('char-age');
+        this.healthDisplay = document.getElementById('char-health');
+        this.savingsDisplay = document.getElementById('char-savings');
+        this.careerDisplay = document.getElementById('char-career');
+        this.logMessage = document.getElementById('log-message');
+
+        this.character = null; // We'll create the character soon
+    }
+
+    // This function will start the game
+    startGame() {
+        const characterName = prompt("Enter your character's name:", "Player");
+        this.character = new Character(characterName || "Player");
+        this.updateDisplay();
+        this.logMessage.textContent = `A new life begins for ${this.character.name}.`;
+    }
+
+    // This function updates the HTML with the character's current stats
+    updateDisplay() {
+        this.nameDisplay.textContent = this.character.name;
+        this.ageDisplay.textContent = this.character.age;
+        this.healthDisplay.textContent = this.character.health;
+        this.savingsDisplay.textContent = this.character.savings.toLocaleString();
+        this.careerDisplay.textContent = this.character.career;
+    }
+}
+
+// --- This is where the game actually starts ---
+const game = new LifeSimulator();
+game.startGame();

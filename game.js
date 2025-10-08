@@ -27,7 +27,7 @@ class Character {
         this.relationship_status = "Single";
         this.location = "Hometown";
 
-        // Relationships (We'll simplify for now and add more later)
+        // Relationships
         this.family_relationship = 70;
 
         // Financial
@@ -39,6 +39,7 @@ class Character {
         this.life_events = [];
     }
 }
+
 class LifeSimulator {
     constructor() {
         // Find all the HTML elements we need to update and store them
